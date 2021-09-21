@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import ImageTk, Image
 from math import pi
-
+from p1_funct import p1
 
 def p1():
     global my_image2
@@ -676,7 +676,6 @@ def p4():
         btn.grid(row=2, column=0, pady=7, ipadx=2, columnspan=3, sticky=N + S)
 
 
-
 class Window:
     def __init__(self, master=None):
         # Window size
@@ -715,7 +714,7 @@ class Window:
         self.sidebar_is_open = False
 
         # Button on sidebar
-        self.btn_close = Button(self.sidebar, text="EXIT", fg="#ffffff", bg="#0E14E3",
+        self.btn_close = Button(self.sidebar, text="SAIR", fg="#ffffff", bg="#0E14E3",
                                 font="System 14 bold", command=root.destroy)
         self.btn_close.place(x=10, y=400, w=180)
 
@@ -778,12 +777,14 @@ class Window:
         self.frame_position += self.sidebar_speed
         self.main_frame.place(x=self.frame_position, y=0, w=self.width, h=self.height)
 
-
 root = Tk()
 Window(root)
 root.geometry("{}x{}+0+0".format(Window().width, Window().height))
 root.title("CASTELLO")
 root.iconbitmap("C:/Banco Dados/castello.ico")
-root.resizable(0,0)
+root.resizable(0, 0)
 root.mainloop()
 
+#TODO Fazer programa conseguir puxar as funções por fora
+
+#TODO Tentar achar o código primário
